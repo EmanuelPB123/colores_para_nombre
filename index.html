@@ -1,0 +1,133 @@
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opciones color</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body id="bodyColor">
+    <!--script>
+        var letra = prompt("ingrese letra")
+        var i=letra.length
+        if (letra=="A")
+
+        {alert("la cant de letras es"+i)}
+        
+        else
+        {alert("naa")}
+    </script-->
+    <script>
+                const $body = document.querySelector("#bodyColor")
+
+        /*var texto = prompt ("ingrese texto").toLowerCase();
+        { alert( "las vocales son"+ contarVocales(texto))};
+        function contarVocales(texto){
+            let contadorVocales=0;
+            let vocales= ["a,e,i,o,u"];
+        for(let i=0;i< texto.length; ++i) {
+            if (vocales.indexOf(texto[i]) >= 0) {
+                ++contadorVocales;
+            }
+        }
+        return contadorVocales;
+        }*/
+        var texto = prompt("ingrese texto").toLowerCase();
+        /*alert(`La palabra ingresada es ${texto}`);*/
+       
+        /*alert('Las vocales son: ' + contarVocales(texto)+" y las consonates son: "+ contarConsonantes(texto)+"y la suma es"+r );*/
+        
+
+        function contarVocales(texto) {
+            let contadorVocales = 0;
+            let vocales = ["a", 'e', 'i', 'o', 'u'];
+
+            for (let i = 0; i < texto.length; ++i) {
+                if (vocales.indexOf(texto[i]) >= 0) {
+                    ++contadorVocales;
+                }
+            }
+            return contadorVocales;
+        }
+        function contarConsonantes(texto) {
+            let contadorConsonantes = 0;
+            let consonantes = ["q", "w", "r", "t", "y", "p", "s", "d", "f", "g", "h", "j", "k", "l", "z", "x", "c", "v", "b", "n", "m"];
+            for (let i = 0; i < texto.length; ++i) {
+                if (consonantes.indexOf(texto[i]) >= 0) {
+                    ++contadorConsonantes;
+                }
+            }
+            return contadorConsonantes;
+        }
+        var n1=contarVocales(texto);
+        var n2=contarConsonantes(texto);
+        var r=0 ;
+        r=n1+n2;
+
+        /*alert("la suma es"+r);*/
+
+
+        alert('Las vocales son: ' + contarVocales(texto)+" y las consonates son: "+ contarConsonantes(texto)+"y la suma es"+ r );
+
+        
+        /*const $body = document.querySelector('#bodyColor');
+        function setColor(r){
+            let oneGradient = 'rgb(210,20,10)';
+            let rgb = 'rgb(210,215,210)';
+            $body.style = `background:linear-gradient(to right,${oneGradient},${rgb})`
+        }
+        setColor(2)
+        /*function changeColor(r){
+            let rgb = "rgb(255,255,255)";
+            let oneGradient = "rgb(210,20,10)" ;
+            let twoGradient =  "rgb(100,50,25)";
+            if (r==0);
+            $body.style= " background:linear-gradient(to right,${oneGradient},${rgb}) ";
+            alert("el color es blanco");
+        }*/
+
+        var nota =r;
+        var mensaje = ""
+        switch(nota){
+             case 3:
+                mensaje="tres color";
+                $body.style="background:linear-gradient(to right,#66ff33,#ff5050,#fff)";
+                break;
+            case 4:
+                mensaje="cuatro color";
+                $body.style="background:radial-gradient(circle ,#6666ff,#993333,#9933ff,#ffff00)";
+                break;
+            case 5:
+                mensaje="cinco color";
+                $body.style="background:linear-gradient(to top,#00cc66,#00cc66,#cc0066,#660066,#ff9933)";
+                break;
+            case 6:
+                mensaje="seis color";
+                $body.style="background:radial-gradient(#ff66ff,#009933,#669999,#3333ff,#ff3399,#663300)";
+                break;
+            case 7:
+                mensaje="7 color";
+                $body.style="background:linear-gradient(to left top,#9966ff,#ccff66,#ff6699,#66ffcc,#0066cc,#ff6699,#9966ff,#ccff66)";
+                break;
+            case 8:
+                mensaje="8 color";
+                $body.style="background:radial-gradient(#66ff99,#6699ff,#6699ff,#ccff66,#99ff99,#66ffff,#cc99ff,#ffcc99)";
+                break;
+            case 9:
+                mensaje="9 color";
+                $body.style="background:linear-gradient(to right top,#ccff33,#33cc33,#00ff99,#ff6666,#fff)";
+                break;
+            case 10:
+                mensaje="diez color";
+                $body.style="background:radial-gradient(circle,#fff,#fff,#fff)";
+                break;
+            default:
+            mensaje="negro";
+            $body.style="background:#000";
+        }
+        alert(mensaje);
+    </script>
+</body>
+
+</html>
